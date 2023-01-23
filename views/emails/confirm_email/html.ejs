@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <style>
+            body {
+                background-color: #eff3fb;
+            }
+            .container {
+                width: 95%;
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @media (min-width: 375px) {
+                .container {
+                    max-width: 375px;
+                    padding-right: 20px;
+                    padding-left: 20px;
+                }
+            }
+            @media (min-width: 680px) {
+                .container {
+                    max-width: 680px;
+                    padding-right: 40px;
+                    padding-left: 40px;
+                }
+            }
+            p {
+                font-size: 14px;
+            }
+            @media (min-width: 680px) {
+                p {
+                    font-size: 16px;
+                }
+            }
+            .card {
+                padding: 32px;
+            }
+            @media (min-width: 680px) {
+                .card {
+                    padding: 50px !important;
+                }
+            }
+            h4 {
+                font-size: 16px;
+                color: #666;
+                font-weight: 600;
+            }
+
+            .iconpadding {
+                padding-top: 24px;
+                padding-bottom: 24px;
+            }
+            @media (min-width: 680px) {
+                .iconpadding {
+                    padding-top: 40px !important;
+                    padding-bottom: 40px !important;
+                }
+            }
+            .iconpaddingleft {
+                padding-left: 24px;
+                display: inline;
+            }
+            @media (min-width: 680px) {
+                .iconpaddingleft {
+                    padding-left: 40px !important;
+                }
+            }
+            a {
+                font-size: 16px;
+            }
+            .imglogo {
+                width: 132px;
+            }
+            @media (min-width: 680px) {
+                .imglogo {
+                    width: 150px !important;
+                }
+            }
+            h1,
+            h4 {
+                padding: 0 !important;
+                margin: 0 !important;
+            }
+        </style>
+    </head>
+    <body>
+        <div
+            style="
+                background: url('<%= IMG_URL %>/email-background.png') #eff3fb;
+                background-size: cover;
+                background-position: center;
+                width: 100%;
+            "
+        >
+            ​​<!--[if gte mso 9]>
+<v:rect xmlns_v="urn:schemas-microsoft-com:vml" fill="true" stroke="false" style="width:600px; background-color:#eff3fb;"><v:fill type="frame" src="<%= IMG_URL %>/email-background.png " />
+<v:textbox style="mso-fit-shape-to-text:true" inset="0,0,0,0">
+<![endif]-->
+            <div class="container">
+                <table
+                    role="presentation"
+                    border="0"
+                    width="100%"
+                    cellspacing="0"
+                >
+                    <tr>
+                        <td align="center">
+                            <img
+                                class="imglogo"
+                                src="<%= IMG_URL %>/logo.png"
+                                alt="Logo"
+                            />
+                            <p></p>
+                        </td>
+                    </tr>
+                </table>
+                <table
+                    role="presentation"
+                    border="0"
+                    width="100%"
+                    cellspacing="0"
+                >
+                    <tr>
+                        <td
+                            style="border-radius: 10px"
+                            align="center"
+                            class="card"
+                            bgcolor="#fff"
+                        >
+                            <h1 style="text-align: center">
+                                Email Confirmation
+                            </h1>
+                            <p
+                                style="
+                                    text-align: center;
+                                    margin-top: 24px;
+                                    margin-bottom: 40px;
+                                "
+                            >
+                                Hey <%= typeof name !== 'undefined'? name :''%>,
+                                you’re almost ready to start enjoying
+                                Themesmarket. Simply click the button below to
+                                verify your email address.
+                            </p>
+                            <a
+                                style="
+                                    font-weight: 500;
+                                    display: inline-block;
+                                    border-radius: 6px;
+                                    padding: 12px 40px;
+                                    color: #fff;
+                                    background-color: #7266fc;
+                                    cursor: pointer;
+                                    text-decoration: none;
+                                "
+                                href="<%= typeof url !== 'undefined'?
+                                url :''%>"
+                                >Verify email address</a
+                            >
+
+                            <p
+                                style="
+                                    color: #666;
+                                    margin-top: 40px;
+                                    margin-bottom: 40px;
+                                "
+                            >
+                                If you didn’t inirtiate this request , you can
+                                safely ignore this email.
+                            </p>
+                            <h4>Thanks!<br />Theme marketplace</h4>
+                        </td>
+                    </tr>
+                </table>
+                <table
+                    role="presentation"
+                    border="0"
+                    width="100%"
+                    cellspacing="0"
+                >
+                    <tr>
+                        <td align="center" class="iconpadding">
+                            <a
+                                style="display: inline-block"
+                                href="<%= INSTAGRAM_URL %>"
+                            >
+                                <img
+                                    style="
+                                        background-color: #fff;
+                                        padding: 9px;
+                                        border-radius: 100px;
+                                        display: inline;
+                                        cursor: pointer;
+                                    "
+                                    src="<%= IMG_URL %>/instagram-icon.png"
+                                    alt=""
+                                />
+                            </a>
+
+                            <p class="iconpaddingleft"></p>
+                            <a
+                                style="display: inline-block"
+                                href="<%= TWITTER_URL %>"
+                            >
+                                <img
+                                    style="
+                                        background-color: #fff;
+                                        padding: 9px;
+                                        border-radius: 100px;
+                                        display: inline;
+                                    "
+                                    src="<%= IMG_URL %>/twitter-icon.png"
+                                    alt=""
+                                />
+                            </a>
+
+                            <p class="iconpaddingleft"></p>
+                            <a
+                                style="display: inline-block"
+                                href="<%= YOUTUBE_URL %>"
+                            >
+                                <img
+                                    style="
+                                        background-color: #fff;
+                                        padding: 9px;
+                                        border-radius: 100px;
+                                        display: inline;
+                                    "
+                                    src="<%= IMG_URL %>/youtube-icon.png"
+                                    alt=""
+                                />
+                            </a>
+                        </td>
+                    </tr>
+                </table>
+                <table
+                    role="presentation"
+                    border="0"
+                    width="100%"
+                    cellspacing="0"
+                >
+                    <tr>
+                        <td align="center">
+                            <p
+                                style="
+                                    color: #9ca0a8;
+                                    text-align: center;
+                                    margin-top: 0;
+                                "
+                            >
+                                If you have any questions, feel free message us
+                                at
+                                <span
+                                    style="
+                                        font-weight: bold;
+                                        color: #0a0c17;
+                                        cursor: pointer;
+                                    "
+                                    ><%= EMAIL %> </span
+                                >. All right reserved. Update email preferences
+                                or unsubscribe.
+                            </p>
+                            <p style="color: #9ca0a8; text-align: center">
+                                <%= ADDRESS %>
+                            </p>
+                            <div style="color: #9ca0a8">
+                                <a
+                                    href="<%= TERMS_URL %>"
+                                    style="display: inline"
+                                    ><p style="display: inline; color: #9ca0a8">
+                                        Terms of use
+                                    </p>
+                                </a>
+
+                                <p
+                                    style="
+                                        display: inline;
+                                        padding-right: 10px;
+                                        padding-left: 10px;
+                                    "
+                                >
+                                    |
+                                </p>
+
+                                <a
+                                    href="<%= PRIVACY_URL %>"
+                                    style="display: inline"
+                                    ><p style="display: inline; color: #9ca0a8">
+                                        Privacy Policy
+                                    </p>
+                                </a>
+                            </div>
+                            <p style="padding-top: 50px"></p>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <!--[if gte mso 9]>
+</v:textbox>
+</v:rect>
+<![endif]-->
+        </div>
+    </body>
+</html>
